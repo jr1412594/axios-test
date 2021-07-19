@@ -2,29 +2,32 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import './App.css';
 import CardContainer from './components/CardContainer'
+
+const baseURL = "https://api.tvmaze.com/shows"
+
 class App extends Component {
 
   state = {
-    characters: []
+    tvShows: [],
+    favTvShows: [],
+    search: ''
   }
 
   componentDidMount(){
-    axios.get('https://rickandmortyapi.com/api/character')
-    .then(response => {
-      const characters = response.data.results;
-      this.setState({characters})
+    axios.get(baseURL)
+    .then(response => { 
+      this.setState({ tvShows: response.data})
     })
   }
+
+  handleChange = (event) => {
+  console.log(event.target)
+  }
+
   render(){
 
-
-
     return (
-      // <ul>
-      //  {this.state.characters.map(character => 
-      //  <li>{character.name},{character.species}</li>)}
-      // </ul>
-      <CardContainer characters={this.state.characters}/>
+      <CardContainer tvShows={this.state.tvShows}/>
     );
   }
 }
