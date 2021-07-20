@@ -23,8 +23,11 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-    console.log(event.target.name, "this is my event console")
   this.setState({[event.target.name]: event.target.value})
+  }
+
+  addToFavs = (event) => {
+    
   }
 
   filteredTvShows = () => {
@@ -50,7 +53,7 @@ class App extends Component {
     return (
       <div className="main">
         <Search handleChange={ this.handleChange } tvShows={ this.state.tvShows }/>
-        <CardContainer tvShows={ this.filteredTvShows() }/>
+        <CardContainer tvShows={ this.filteredTvShows() } addToFavs={ this.addToFavs }/>
       </div>
     );
   }

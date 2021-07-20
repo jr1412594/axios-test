@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function GenreSearch({ handleChange, tvShows, key }) {
+export default function GenreSearch({ handleChange, tvShows }) {
 
 
 

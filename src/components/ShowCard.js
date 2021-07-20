@@ -3,7 +3,7 @@ import React from 'react'
 export default function ShowCard({ tvShow }) {
 
     return (
-        <div className="tvshow-card">
+        <div className="tvshow-card" >
             <img className="tvshow-image"
                 src={tvShow.image.medium}
                 alt=''
