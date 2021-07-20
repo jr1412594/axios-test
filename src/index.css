@@ -12,3 +12,16 @@
   text-overflow: clip;
   border-radius: 1rem;
 }
+
+.search-bar {
+  text-align: center;
+  padding: 2rem;
+}
+
+.genre-div {
+  padding: 2rem;
+}
+
+.main {
+  align-content: center;
+}
