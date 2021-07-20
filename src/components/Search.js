@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default function Search() {
+export default function Search({ handleChange }) {
     return (
         <div>
-            <input 
-                className='search' 
+            <input
+                onChange={ handleChange }
+                type='text'
                 name='search'
                 placeholder='Enter title'
             />
