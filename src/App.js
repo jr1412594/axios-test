@@ -26,8 +26,14 @@ class App extends Component {
   this.setState({[event.target.name]: event.target.value})
   }
 
-  addToFavs = (event) => {
-    
+  addToFavs = (show) => {
+    return this.state.tvShows.find(tvShow => {
+      if(tvShow.id === show.id) {
+        return this.setState({favTvShows: [...this.state.favTvShows, show]})
+      } else {
+        return  "not the droid"
+      }
+    })
   }
 
   filteredTvShows = () => {

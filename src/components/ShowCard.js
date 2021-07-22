@@ -1,9 +1,14 @@
 import React from 'react'
 
-export default function ShowCard({ tvShow }) {
+export default function ShowCard({ tvShow, addToFavs }) {
+
+    const handleClick = () => {
+        console.log("this was clicked")
+        addToFavs()
+    }
 
     return (
-        <div className="tvshow-card" >
+        <div className="tvshow-card" handleClick={handleClick}>
             <img className="tvshow-image"
                 src={tvShow.image.medium}
                 alt=''
