@@ -4,6 +4,8 @@ import './App.css';
 
 import CardContainer from './components/CardContainer'
 import Search from './components/Search'
+import FavCardContainer from './components/FavCardContainer';
+
 const baseURL = "https://api.tvmaze.com/shows"
 
 class App extends Component {
@@ -26,14 +28,9 @@ class App extends Component {
   this.setState({[event.target.name]: event.target.value})
   }
 
-  addToFavs = (show) => {
-    return this.state.tvShows.find(tvShow => {
-      if(tvShow.id === show.id) {
-        return this.setState({favTvShows: [...this.state.favTvShows, show]})
-      } else {
-        return  "not the droid"
-      }
-    })
+  addToFavs = (program) => {
+      if(!this.state.favTvShows.find(show => show.id === program.id))
+      this.setState({favTvShows: [...this.state.favTvShows, program]})
   }
 
   filteredTvShows = () => {
@@ -59,6 +56,7 @@ class App extends Component {
     return (
       <div className="main">
         <Search handleChange={ this.handleChange } tvShows={ this.state.tvShows }/>
+        <FavCardContainer favTvShows={ this.state.favTvShows }/>
         <CardContainer tvShows={ this.filteredTvShows() } addToFavs={ this.addToFavs }/>
       </div>
     );

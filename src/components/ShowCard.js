@@ -3,12 +3,12 @@ import React from 'react'
 export default function ShowCard({ tvShow, addToFavs }) {
 
     const handleClick = () => {
-        console.log("this was clicked")
-        addToFavs()
+        console.log(tvShow,"this was clicked")
+        addToFavs(tvShow)
     }
 
     return (
-        <div className="tvshow-card" handleClick={handleClick}>
+        <div className="tvshow-card" onClick={handleClick}>
             <img className="tvshow-image"
                 src={tvShow.image.medium}
                 alt=''
