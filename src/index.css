@@ -6,6 +6,10 @@
   justify-content: space-between;
 }
 
+.fav-card-container {
+  background-color: aquamarine;
+}
+
 .tvshow-card {
   width: 300px;
   text-align: center;
