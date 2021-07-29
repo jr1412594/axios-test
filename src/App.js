@@ -55,8 +55,8 @@ class App extends Component {
 
     return (
       <div className="main">
-        <Search handleChange={ this.handleChange } tvShows={ this.state.tvShows }/>
         <FavCardContainer favTvShows={ this.state.favTvShows }/>
+        <Search handleChange={ this.handleChange } tvShows={ this.state.tvShows }/>
         <CardContainer tvShows={ this.filteredTvShows() } addToFavs={ this.addToFavs }/>
       </div>
     );

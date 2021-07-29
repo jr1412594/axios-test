@@ -7,7 +7,9 @@
 }
 
 .fav-card-container {
-  background-color: aquamarine;
+  background-color: rgb(88, 94, 86);
+  padding-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .tvshow-card {
