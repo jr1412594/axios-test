@@ -13,7 +13,11 @@ export default function ShowCard({ tvShow, addToFavs }) {
                 src={tvShow.image.medium}
                 alt=''
             />
+            <div>
             <h1 className="tvshow-title">{tvShow.name}</h1>
+            <button className='show-button'>👍{tvShow.count}</button>
+            </div>
+
         </div>
     )
 }

@@ -12,11 +12,16 @@
   margin-bottom: 2rem;
 }
 
+.tvshow-title {
+  margin-bottom: 1px;
+}
+
 .tvshow-card {
   width: 300px;
   text-align: center;
   text-overflow: clip;
   border-radius: 1rem;
+  margin-bottom: 2rem;
 }
 
 .search-bar {
