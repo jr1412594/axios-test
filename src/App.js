@@ -14,8 +14,7 @@ class App extends Component {
     tvShows: [],
     favTvShows: [],
     search: '',
-    genre: "all",
-    count: 0
+    genre: "all"
   }
 
   componentDidMount(){

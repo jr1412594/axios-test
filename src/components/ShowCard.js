@@ -10,24 +10,24 @@ export default function ShowCard({ tvShow, addToFavs }) {
         addToFavs(tvShow)
     }
 
-    const likeClick = () => {
-        console.log(count)
-        setCount()
+    const likeClick = (event) => {
+        let currentLikeCount = parseInt(event.target.value)
+        setCount(currentLikeCount + 1)
     }
 
     
 
     return (
-        <div className="tvshow-card" onClick={handleClick}>
-            <img className="tvshow-image"
-                src={tvShow.image.medium}
-                alt=''
-            />
-            <div>
-            <h1 className="tvshow-title">{tvShow.name}</h1>
-            <button className='show-button' onClick={ likeClick }>👍: {count}</button>
+            <div className="tvshow-card">
+                <img className="tvshow-image"
+                    src={ tvShow.image.medium }
+                    alt=''
+                    onClick={ handleClick }
+                />
+                <div>
+                    <h1 className="tvshow-title">{ tvShow.name }</h1>
+                    <button className='show-button' value={count} onClick={ likeClick }>👍: {count}</button>
+                </div>
             </div>
-
-        </div>
     )
 }
